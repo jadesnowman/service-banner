@@ -1,9 +1,21 @@
 version: '3.8'
 
 services:
-  service_banner:
+  service_banner_backend:
     build: .
     ports:
       - 8000:8000
     volumes:
       - .:/app
+    depends_on:
+      - service_banner_db
+  service_banner_db:
+    build: .docker/mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: sandbox_service_banner
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - .docker/mysql/data:/var/lib/mysql
+    ports:
+      - 33066:3306
