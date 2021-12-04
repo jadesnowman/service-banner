@@ -1,1 +1,6 @@
-Django
+Django==3.2.9
+djangorestframework==3.12.4
+mysqlclient==2.1.0
+# django-mysql
+# django-cors-handler
+# pika
