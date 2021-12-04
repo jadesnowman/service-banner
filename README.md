@@ -17,3 +17,13 @@ python manage.py startapp service_category
 
 # RUN PROJECT
 manage.py
+
+
+Creating models
+Activating models
+python manage.py makemigrations polls
+python manage.py sqlmigrate polls 0001
+python manage.py migrate
+
+__Playing with the API__
+ python manage.py shell
