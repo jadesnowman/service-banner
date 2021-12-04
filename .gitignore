@@ -1,1 +1,3 @@
 .docker/mysql/data
+runner.sh
+**/__pycache__/
